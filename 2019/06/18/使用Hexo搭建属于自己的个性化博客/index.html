@@ -87,7 +87,7 @@
 <meta property="og:description" content="准备工作下载node.js并安装（官网下载安装），此步骤会默认安装npm。下载安装git（官网下载安装） 正式开始在本地新建文件夹用来存放Hexo的相关文件和博客文章，下载安装hexo。方法：打开Git bash或者在文件夹右键打开，运行：npm install -g hexo-cli（要翻墙）hexo init Hexocd Hexonpm install 都执行成功后，会在目录生成一个Hexo">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/images/IMG_2870.jpg">
-<meta property="og:updated_time" content="2019-07-26T05:05:06.300Z">
+<meta property="og:updated_time" content="2019-07-26T05:07:57.525Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Hexo搭建属于自己的个性化博客">
 <meta name="twitter:description" content="准备工作下载node.js并安装（官网下载安装），此步骤会默认安装npm。下载安装git（官网下载安装） 正式开始在本地新建文件夹用来存放Hexo的相关文件和博客文章，下载安装hexo。方法：打开Git bash或者在文件夹右键打开，运行：npm install -g hexo-cli（要翻墙）hexo init Hexocd Hexonpm install 都执行成功后，会在目录生成一个Hexo">
@@ -315,21 +315,15 @@
 <p>写博客文章<br>在blog/source/_posts文件夹里写文章<br>命令行输入<br>$ hexo new [layout] <title><br>layout可选<br>| 布局（layout）|存储路径|说明<br>|-|-|-|-|<br>|post|source/_posts|默认，可以直接发布<br>|page|source|在source下新建一个文件夹<br>|draft|source/_drafts|新建文件将保持到_drafts中</title></p>
 <p>可以用 publish 命令将草稿移动到 source/_posts 文件夹下<br>$ hexo publish [layout] <title></title></p>
 <p>经过准备工作，现在差不多就可以安心的写作了。打开source/_posts文件夹下刚创建的Markdown文件，你会发现有如下内容：</p>
-<pre><code>---
-title: title
-date: 2019-06-17 11:01:54
-tags: 
----</code></pre><p>注意，这里的 title 是可以随便改的，当然了 date 也是可以改，不过没有改的必要；这里要说一下 tags 这个属性，如果需要配置多个有两种方式：</p>
-<pre><code>---
-title: 文章标题
-date: 2019-06-17 09:21:14
-updated: 2019-06-17 09:21:14
-comments: ture
-tags: 
- - 标签
-categories: 
- - 分类
----</code></pre><p>标签格式<br>tags: [tag1, tag2, tag3]<br>或者<br>tags:</p>
+<h2 id="···"><a href="#···" class="headerlink" title="···"></a>···</h2><p>title: title<br>date: 2019-06-17 11:01:54</p>
+<h2 id="tags"><a href="#tags" class="headerlink" title="tags: "></a>tags: </h2><p>···<br>注意，这里的 title 是可以随便改的，当然了 date 也是可以改，不过没有改的必要；这里要说一下 tags 这个属性，如果需要配置多个有两种方式：</p>
+<h2 id="···-1"><a href="#···-1" class="headerlink" title="···"></a>···</h2><p>title: 文章标题<br>date: 2019-06-17 09:21:14<br>updated: 2019-06-17 09:21:14<br>comments: ture<br>tags: </p>
+<ul>
+<li>标签<br>categories: </li>
+<li>分类</li>
+</ul>
+<hr>
+<p>···<br>标签格式<br>tags: [tag1, tag2, tag3]<br>或者<br>tags:</p>
 <ul>
 <li>tag1</li>
 <li>tag2</li>
@@ -542,7 +536,7 @@ categories:
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#准备工作"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正式开始"><span class="nav-number">2.</span> <span class="nav-text">正式开始</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#将博客推送到GitHub和Coding"><span class="nav-number">3.</span> <span class="nav-text">将博客推送到GitHub和Coding</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一级标题"><span class="nav-number">4.</span> <span class="nav-text">一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二级标题，粗体和斜体"><span class="nav-number">4.1.</span> <span class="nav-text">二级标题，粗体和斜体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#超链接"><span class="nav-number">4.2.</span> <span class="nav-text">超链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入图片"><span class="nav-number">4.3.</span> <span class="nav-text">插入图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表格"><span class="nav-number">4.4.</span> <span class="nav-text">表格</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#准备工作"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正式开始"><span class="nav-number">2.</span> <span class="nav-text">正式开始</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#将博客推送到GitHub和Coding"><span class="nav-number">3.</span> <span class="nav-text">将博客推送到GitHub和Coding</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#···"><span class="nav-number">3.1.</span> <span class="nav-text">···</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tags"><span class="nav-number">3.2.</span> <span class="nav-text">tags: </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#···-1"><span class="nav-number">3.3.</span> <span class="nav-text">···</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一级标题"><span class="nav-number">4.</span> <span class="nav-text">一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二级标题，粗体和斜体"><span class="nav-number">4.1.</span> <span class="nav-text">二级标题，粗体和斜体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#超链接"><span class="nav-number">4.2.</span> <span class="nav-text">超链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入图片"><span class="nav-number">4.3.</span> <span class="nav-text">插入图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表格"><span class="nav-number">4.4.</span> <span class="nav-text">表格</span></a></li></ol></li></ol></div>
             
 
           </div>
