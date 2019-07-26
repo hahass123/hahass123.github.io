@@ -443,35 +443,66 @@
       
         
           
-            <h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>下载node.js并安装（官网下载安装），此步骤会默认安装npm。<br>下载安装git（官网下载安装）</p>
-<h1 id="正式开始"><a href="#正式开始" class="headerlink" title="正式开始"></a>正式开始</h1><p>在本地新建文件夹用来存放Hexo的相关文件和博客文章，下载安装hexo。方法：打开Git bash或者在文件夹右键打开，运行：<br>npm install -g hexo-cli（要翻墙）<br>hexo init Hexo<br>cd Hexo<br>npm install</p>
+            <h1 id="1、准备工作"><a href="#1、准备工作" class="headerlink" title="1、准备工作"></a>1、准备工作</h1><p>下载node.js并安装（官网下载安装），此步骤会默认安装npm。<br>下载安装git（官网下载安装）</p>
+<h1 id="2、正式开始"><a href="#2、正式开始" class="headerlink" title="2、正式开始"></a>2、正式开始</h1><p>在本地新建文件夹用来存放Hexo的相关文件和博客文章，下载安装hexo。方法：打开Git bash或者在文件夹右键打开，运行：<br>npm install -g hexo-cli（要翻墙）<br>hexo init Hexo<br>cd Hexo<br>npm install</p>
 <p>都执行成功后，会在目录生成一个Hexo文件夹，以后Hexo文件夹就是本地静态网站配合和文章存放的地方。<br>接下来启动本地hexo，先本地预览hexo，执行如下命令：<br>hexo s</p>
 <p>当看到命令行窗口出现，INFO Hexo is running at <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>. Press Ctrl+C to stop.<br>的内容时，说明启动成功了，然后在浏览器输入网址：<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 即可看到本地hexo网站了。<br>无法访问<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a><br>命令行不要退出，不要按Ctrl+C<br>如果还不行：<br>如果您想要更改端口，或是在执行时遇到了 EADDRINUSE 错误，可以在执行时使用 -p 选项指定其他端口，如下：<br>$ hexo server -p 5000</p>
-<h1 id="将博客推送到GitHub和Coding"><a href="#将博客推送到GitHub和Coding" class="headerlink" title="将博客推送到GitHub和Coding"></a>将博客推送到GitHub和Coding</h1><p>注册coding<br>新建项目<br>注意事项:<br>项目名要和用户名一致<br>要选择公开<br>创建好项目后在个人设置里面添加SSH公钥，可以参照帮助文档[配置 SSH 公钥访问代码仓库]<a href="http://dtid_0ecec7302fa20d1a.coding.me/ysusstech/" target="_blank" rel="noopener">http://dtid_0ecec7302fa20d1a.coding.me/ysusstech/</a></p>
+<h1 id="3、将博客推送到GitHub和Coding"><a href="#3、将博客推送到GitHub和Coding" class="headerlink" title="3、将博客推送到GitHub和Coding"></a>3、将博客推送到GitHub和Coding</h1><p>注册coding<br>新建项目<br>注意事项:<br>项目名要和用户名一致<br>要选择公开<br>创建好项目后在个人设置里面添加SSH公钥，可以参照帮助文档[配置 SSH 公钥访问代码仓库]<a href="http://dtid_0ecec7302fa20d1a.coding.me/ysusstech/" target="_blank" rel="noopener">http://dtid_0ecec7302fa20d1a.coding.me/ysusstech/</a></p>
 <h2 id="GitHub创建个人仓库"><a href="#GitHub创建个人仓库" class="headerlink" title="GitHub创建个人仓库"></a>GitHub创建个人仓库</h2><p>登录到GitHub,如果没有GitHub帐号，使用你的邮箱注册GitHub帐号：Build software better,<br>together 点击GitHub中的New repository创建新仓库，仓库名应该为：用户名.<a href="http://github.io" target="_blank" rel="noopener">http://github.io</a><br>这个用户名使用你的GitHub帐号名称代替，这是固定写法，创建好项目后在个人设置里面添加SSH公钥，</p>
 <p>打开本地的MyBlog文件夹项目内的_config.yml配置文件，将其中的type设置为git（注意冒号之后的空格，另外记得都用半角字符）<br>deploy:<br>  type: git<br>  repo:<br>    coding: <a href="mailto:git@git.dev.tencent.com" target="_blank" rel="noopener">git@git.dev.tencent.com</a>:dtid_0ecec7302fa20d1a/ysusstech.git<br>    github: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:hahass123/hahass123.github.io.git<br>  branch: master<br>要使用git链接，这样添加SSH公钥后每次提交不用输入账号密码</p>
 <h2 id="为-Hexo-安装-Git-插件"><a href="#为-Hexo-安装-Git-插件" class="headerlink" title="为 Hexo 安装 Git 插件"></a>为 Hexo 安装 Git 插件</h2><p>安装 hexo-deployer-git，否则会报 ERROR Deployer not found: git 的错误。<br>npm install hexo-deployer-git –save</p>
 <p>hexo clean #清空hexo，主要删除Hexo根目录下的public文件夹<br>hexo g #重新成功public文件夹内容<br>hexo s #启动本地hexo服务<br>hexo d #发布到远程仓库</p>
-<p>以后每次同步远程仓库，基本都是上面4个命令的顺序。</p>
-<h1 id="更改主题"><a href="#更改主题" class="headerlink" title="更改主题"></a>更改主题</h1><p>既然默认主题很丑，那我们别的不做，首先来替换一个好看点的主题。<br>[官方主题]<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a>：官方提供的各种主题<br>这里我推荐主题NexT。更换NexT主题可以参考[NexT]<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">http://theme-next.iissnan.com/</a> 官方使用文档，点击开始使用一步一步操作。</p>
-<h1 id="写博客文章"><a href="#写博客文章" class="headerlink" title="写博客文章"></a>写博客文章</h1><p>在blog/source/_posts文件夹里写文章<br>命令行输入<br>        $ hexo new [layout] <title><br>layout可选<br>| 布局（layout）|存储路径|说明<br>|-|-|-|-|<br>|post|source/_posts|默认，可以直接发布|<br>|page|source|在source下新建一个文件夹|<br>|draft|source/_drafts|新建文件将保持到_drafts中|</title></p>
-<p>可以用 publish 命令将草稿移动到 source/_posts 文件夹下<br>    $ hexo publish [layout] <title></title></p>
-<p>经过准备工作，现在差不多就可以安心的写作了。打开source/_posts文件夹下刚创建的Markdown文件，你会发现有如下内容：</p>
-<h2 id="···"><a href="#···" class="headerlink" title="···"></a>···</h2><p>title: title<br>date: 2019-06-17 11:01:54</p>
-<h2 id="tags"><a href="#tags" class="headerlink" title="tags: "></a>tags: </h2><p>···<br>注意，这里的 title 是可以随便改的，当然了 date 也是可以改，不过没有改的必要；这里要说一下 tags 这个属性，如果需要配置多个有两种方式：</p>
-<h2 id="···-1"><a href="#···-1" class="headerlink" title="···"></a>···</h2><p>title: 文章标题<br>date: 2019-06-17 09:21:14<br>updated: 2019-06-17 09:21:14<br>comments: ture<br>tags: </p>
-<ul>
-<li>标签<br>categories: </li>
-<li>分类</li>
-</ul>
-<hr>
-<p>···<br>标签格式<br>tags: [tag1, tag2, tag3]<br>或者<br>tags:</p>
+<p>以后每次同步远程仓库，基本都是上面4个命令的顺序。<br>另外启动本地Hexo服务后想查看网页千万不要用Ctrl+C复制，因为那是停止本地服务的快捷键，可以右键复制</p>
+<h1 id="4、更改主题"><a href="#4、更改主题" class="headerlink" title="4、更改主题"></a>4、更改主题</h1><p>既然默认主题很丑，那我们别的不做，首先来替换一个好看点的主题。<br>[官方主题]<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a>：官方提供的各种主题<br>这里我推荐主题NexT。更换NexT主题可以参考[NexT]<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">http://theme-next.iissnan.com/</a> 官方使用文档，点击开始使用一步一步操作。</p>
+<h1 id="5、写博客文章"><a href="#5、写博客文章" class="headerlink" title="5、写博客文章"></a>5、写博客文章</h1><p>在blog/source/_posts文件夹里写文章<br>命令行输入：</p>
+<pre><code>$ hexo new [layout] &lt;title&gt;</code></pre><p>layout可选</p>
+<table>
+<thead>
+<tr>
+<th>布局（layout）</th>
+<th>存储路径</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>post</td>
+<td>source/_posts</td>
+<td>默认，可以直接发布</td>
+</tr>
+<tr>
+<td>page</td>
+<td>source</td>
+<td>在source下新建一个文件夹</td>
+</tr>
+<tr>
+<td>draft</td>
+<td>source/_drafts</td>
+<td>新建文件将保持到_drafts中</td>
+</tr>
+</tbody></table>
+<p>可以用 publish 命令将草稿移动到 source/_posts 文件夹下</p>
+<pre><code>$ hexo publish [layout] &lt;title&gt;</code></pre><p>经过准备工作，现在差不多就可以安心的写作了。打开source/_posts文件夹下刚创建的Markdown文件，你会发现有如下内容：</p>
+<pre><code>---
+title: title
+date: 2019-06-17 11:01:54
+tags: 
+---</code></pre><p>注意，这里的 title 是可以随便改的，当然了 date 也是可以改，不过没有改的必要；这里要说一下 tags 这个属性，如果需要配置多个有两种方式：</p>
+<pre><code>---
+title: 文章标题
+date: 2019-06-17 09:21:14
+updated: 2019-06-17 09:21:14
+comments: ture
+tags: 
+- 标签
+categories: 
+- 分类
+---</code></pre><p>标签格式<br>tags: [tag1, tag2, tag3]<br>或者<br>tags:</p>
 <ul>
 <li>tag1</li>
 <li>tag2</li>
-<li>tag3<br>之前说过 Hexo 是支持 Markdown 的所有功能的，所以，下面去学习一下 Markdown 的语法规范。<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题，粗体和斜体"><a href="#二级标题，粗体和斜体" class="headerlink" title="二级标题，粗体和斜体"></a>二级标题，粗体和斜体</h2></li>
+<li>tag3<br>之前说过 Hexo 是支持 Markdown 的所有功能的，所以，下面去学习一下 Markdown 的语法规范。</li>
 </ul>
-<p><em>这是斜体</em> 或 <em>这也是斜体</em><br><strong>这是粗体</strong><br><strong><em>这是加粗斜体</em></strong><br><del>这是删除线</del></p>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题，粗体和斜体"><a href="#二级标题，粗体和斜体" class="headerlink" title="二级标题，粗体和斜体"></a>二级标题，粗体和斜体</h2><p><em>这是斜体</em> 或 <em>这也是斜体</em><br><strong>这是粗体</strong><br><strong><em>这是加粗斜体</em></strong><br><del>这是删除线</del></p>
 <h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p>行内形式：[我的博客]（<a href="https://hahass123.github.io/）" target="_blank" rel="noopener">https://hahass123.github.io/）</a><br>参考形式：[我的博客][1]<br>[1]:<a href="https://hahass123.github.io/" target="_blank" rel="noopener">https://hahass123.github.io/</a><br>自动链接：我的博客地址<a href="https://hahass123.github.io/" target="_blank" rel="noopener">https://hahass123.github.io/</a></p>
 <p>##列表</p>
 <ul>
